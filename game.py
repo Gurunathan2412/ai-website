@@ -6,6 +6,7 @@ WIDTH, HEIGHT = 600, 600
 GRID_SIZE = 20
 GRID_WIDTH, GRID_HEIGHT = WIDTH // GRID_SIZE, HEIGHT // GRID_SIZE
 WHITE = (255, 255, 255)
+BLACK = (0,0,0)
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 
@@ -65,7 +66,7 @@ while running:
         running = False
 
     # Clear the screen
-    screen.fill((0, 0, 0))
+    screen.fill((255, 255, 255))
 
     # Draw Snake
     for segment in snake:
@@ -80,7 +81,7 @@ while running:
 
     # Display Score
     font = pygame.font.Font(None, 36)
-    score_text = font.render(f"Score: {score}", True, WHITE)
+    score_text = font.render(f"Score: {score}", True, BLACK)
     screen.blit(score_text, (10, 10))
 
     # Update the display
